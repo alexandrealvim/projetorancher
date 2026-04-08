@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: hellogo
+  namespace: gitops-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: hellogo
+  template:
+    metadata:
+      labels:
+        app: hellogo
+    spec:
+      containers:
+        - name: hellogo
+          image: paulovigne/hellogo
+          ports:
+            - containerPort: 8080
