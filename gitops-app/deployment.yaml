@@ -15,6 +15,6 @@ spec:
     spec:
       containers:
         - name: hellogo
-          image: paulovigne/hellogo
+          image: nginxdemos/hello
           ports:
             - containerPort: 8080
